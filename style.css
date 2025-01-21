@@ -1,0 +1,167 @@
+ /* General Styles */
+ body {
+     margin: 0;
+     font-family: 'Arial', sans-serif;
+     background-color: #121212;
+     color: #ffffff;
+     line-height: 1.6;
+ }
+
+ a {
+     color: #1e90ff;
+     text-decoration: none;
+ }
+
+ a:hover {
+     text-decoration: underline;
+ }
+
+ header {
+     background: #1f1f1f;
+     padding: 1rem 2rem;
+     text-align: center;
+     animation: fadeIn 2s ease-in-out;
+ }
+
+ header h1 {
+     margin: 0;
+     font-size: 2.5rem;
+     color: #ffffff;
+ }
+
+ .container {
+     width: 90%;
+     max-width: 1200px;
+     margin: 2rem auto;
+     animation: slideIn 1s ease-in-out;
+ }
+
+ section {
+     margin-bottom: 2rem;
+ }
+
+ .h2 {
+     font-size: 2rem;
+     color: #ffffff;
+     margin-bottom: 1rem;
+     position: relative;
+     animation: fadeIn 1.5s ease-in-out;
+ }
+
+ /* Work Section */
+ .work {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1.5rem;
+ }
+
+ .work-item {
+     background: #1f1f1f;
+     padding: 1rem;
+     border-radius: 8px;
+     flex: 1 1 calc(33.333% - 1.5rem);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+     transition: transform 0.3s, box-shadow 0.3s;
+ }
+
+ .work-item:hover {
+     transform: scale(1.05);
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+ }
+
+ .work-item img {
+     width: 100%;
+     border-radius: 8px;
+     margin-bottom: 0.5rem;
+     animation: fadeIn 1.5s ease-in-out;
+ }
+
+ /* Skills Section */
+ .skills {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     gap: 1rem;
+ }
+
+ .skill {
+     background: #1f1f1f;
+     padding: 1rem;
+     text-align: center;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+     animation: slideIn 1s ease-in-out;
+ }
+
+ .skill:hover {
+     transform: scale(1.1);
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+ }
+
+ /* Contact Section */
+ .contact-info {
+     background: #1f1f1f;
+     padding: 1rem;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+     animation: fadeIn 1.5s ease-in-out;
+ }
+
+ .contact-info p {
+     margin: 0.5rem 0;
+ }
+
+ /* Animations */
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ @keyframes slideIn {
+     from {
+         transform: translateY(50px);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ /* About Icons Section */
+ .about-icons {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 15px;
+     /* Space between icons */
+     padding: 20px 0;
+ }
+
+ .about-icons a {
+     text-decoration: none;
+     display: inline-block;
+     transition: transform 0.3s ease, opacity 0.3s ease;
+ }
+
+ .about-icons img {
+     width: 40px;
+     /* Icon size */
+     height: 40px;
+     filter: grayscale(100%);
+     /* Makes icons grayscale */
+     transition: filter 0.3s ease, transform 0.3s ease;
+ }
+
+ .about-icons a:hover img {
+     filter: grayscale(0%);
+     /* Full color on hover */
+     transform: scale(1.1);
+     /* Slight enlargement on hover */
+     opacity: 1;
+ }
